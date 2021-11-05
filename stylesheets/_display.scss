@@ -1,0 +1,25 @@
+@import "animations";
+@import "variables";
+
+.mobile-menu {
+//    visibility: hidden;
+    background-color: $primary-color;
+    color: white;
+    width: 200px;
+    height: 250px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    position: fixed;
+    top: 70px;
+    transform: translateX(-180px);
+    transition: transform 0.3s linear;
+    z-index: 10;
+
+    ul {
+        
+    }
+
+}
+
+
