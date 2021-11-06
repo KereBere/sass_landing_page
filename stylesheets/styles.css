@@ -312,6 +312,7 @@ a:hover::after, .log-in:hover::after {
 }
 
 .mobile-menu {
+  visibility: hidden;
   background-color: #1e3a57;
   color: white;
   width: 200px;
@@ -329,6 +330,67 @@ a:hover::after, .log-in:hover::after {
   transition: transform 0.3s linear;
   transition: transform 0.3s linear, -webkit-transform 0.3s linear;
   z-index: 10;
+}
+
+.mobile-menu ul {
+  list-style: none;
+}
+
+.mobile-menu ul li {
+  padding: 5px;
+}
+
+.mobile-menu ul li a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+.burger {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+}
+
+.burger .line1 {
+  width: 50px;
+  height: 1.2px;
+  background-color: white;
+  margin: 5px;
+}
+
+.burger .line2 {
+  width: 30px;
+  height: 1.2px;
+  background-color: white;
+  margin: 5px;
+}
+
+.burger .line3 {
+  width: 50px;
+  height: 1.2px;
+  background-color: white;
+  margin: 5px;
+}
+
+.open-mobile-menu {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1 !important;
+}
+
+@media (max-width: 850px) {
+  #menu {
+    display: none;
+  }
+  .mobile-menu {
+    visibility: visible;
+    opacity: 0.8;
+  }
+  .video-title {
+    font-size: 2.5rem !important;
+  }
 }
 
 nav {

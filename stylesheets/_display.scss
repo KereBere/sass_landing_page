@@ -2,7 +2,7 @@
 @import "variables";
 
 .mobile-menu {
-//    visibility: hidden;
+    visibility: hidden;
     background-color: $primary-color;
     color: white;
     width: 200px;
@@ -17,9 +17,62 @@
     z-index: 10;
 
     ul {
-        
+        list-style: none;
+
+        li {
+            padding: 5px;
+
+            a {
+                color: white;
+                text-decoration: none;
+                position: relative;
+            }
+        }
     }
 
 }
 
+.burger {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    .line1 {
+        width: 50px;
+        height: 1.2px;
+        background-color: white;
+        margin: 5px;
+    }
+    .line2 {
+        width: 30px;
+        height: 1.2px;
+        background-color: white;
+        margin: 5px;
+    }
+    .line3 {
+        width: 50px;
+        height: 1.2px;
+        background-color: white;
+        margin: 5px;
+    }
+}
 
+.open-mobile-menu {
+    transform: translateX(0);
+    opacity: 1 !important;
+}
+
+@media (max-width: 850px) {
+    #menu{
+        display: none;
+    }
+
+    .mobile-menu {
+        visibility: visible;
+        opacity: 0.8;
+    }
+
+    .video-title{
+        font-size: 2.5rem !important;
+    }
+}
